@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://materialise.lvh.me:3000"
+    },
     modulePrefix: 'application101',
     environment: environment,
     baseURL: '/',
@@ -20,6 +23,15 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    //ENV.contentSecurityPolicy = {
+      //'default-src': ["'none'"],
+      //'script-src':  ["'self'"],
+      //'font-src':    ["'self'"],
+      //'connect-src': ["'self'"],
+      //'img-src':     ["'self'"],
+      //'style-src':   ["'self'"],
+      //'media-src':   ["'self'"]
+    //}
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
