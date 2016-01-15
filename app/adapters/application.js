@@ -4,8 +4,8 @@ export default DS.JSONAPIAdapter.extend({
   buildURL(modelName, id, snapshot, requestType, query) {
     return this._super(modelName, id, snapshot, requestType, query) + ".json"
   },
-  host: 'http://hassan.lvh.me:3000',
+  host: 'http://materialise.lvh.me:3000',
   headers: {
-    "token": "81ed1639d2a7cad24be17a5e0724bc39"
+    "token": "27b148dd353b7a9693bf1d023a2fb00d"
   }
 });

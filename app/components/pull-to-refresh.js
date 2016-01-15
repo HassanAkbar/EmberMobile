@@ -7,15 +7,19 @@ export default Ember.Component.extend({
     var dom7 = this.get('framework-seven').get('dom');
 
     var ptrContent = dom7('.pull-to-refresh-content');
-    console.log('have i found the dom');
-    console.log(ptrContent);
+
+    var self = this;
+
     ptrContent.on('refresh', function (e) {
-      
-      // var page = this.get('page');
-      // console.log('am i working' + page);
-      // {{debugger}}
+      self.triggerAction({action: 'refresh', target: self});
       framework.pullToRefreshDone();
     })
+  },
+  actions: {
+    refresh: function() {
+      this.sendAction('action');
+    }
   }
+
 });
 
