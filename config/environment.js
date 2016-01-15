@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
-      'connect-src': "'self' http://materialise.lvh.me:3000"
+      'connect-src': "'self' http://*.lvh.me:3000"
     },
     modulePrefix: 'application101',
     environment: environment,

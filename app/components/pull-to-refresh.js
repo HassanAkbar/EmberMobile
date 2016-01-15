@@ -10,8 +10,12 @@ export default Ember.Component.extend({
     console.log('have i found the dom');
     console.log(ptrContent);
     ptrContent.on('refresh', function (e) {
-      console.log('am i working');
+      
+      // var page = this.get('page');
+      // console.log('am i working' + page);
+      // {{debugger}}
       framework.pullToRefreshDone();
     })
   }
 });
+
