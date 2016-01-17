@@ -1,6 +1,9 @@
 import Ember from 'ember';
 import config from './config/environment';
 
+console.log('in the router');
+console.log(config.APP.IS_RENTALS);
+
 const Router = Ember.Router.extend({
   location: config.locationType
 });
