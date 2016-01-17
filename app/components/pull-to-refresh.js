@@ -3,11 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   didInsertElement() {
     var framework = this.get('framework-seven').get('framework');
-    this.get('framework-seven').get('framework').init(); // WHY?
     var dom7 = this.get('framework-seven').get('dom');
 
-    var ptrContent = dom7('.pull-to-refresh-content');
+    // NOTE(SOHAIB): Need to figure this out...
+    this.get('framework-seven').get('framework').init()
 
+    var ptrContent = dom7('.pull-to-refresh-content');
     var self = this;
 
     ptrContent.on('refresh', function (e) {
@@ -20,6 +21,5 @@ export default Ember.Component.extend({
       this.sendAction('action');
     }
   }
-
 });
 
