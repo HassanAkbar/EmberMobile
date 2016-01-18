@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Application101</title>
+    <title>{{content-for 'config.title'}}</title>
     <meta name="description" content="">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -28,10 +28,6 @@
     {{content-for 'head-footer'}}
   </head>
   <body>
-    {{#if true}}
-    {{/if}}
-
-    <h1>{{env.APP.IS_RENTALS}}</h1>
     {{content-for 'body'}}
 
     <script src="assets/vendor.js"></script>

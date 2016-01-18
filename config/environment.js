@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
+    title: 'Yo man sup',
     contentSecurityPolicy: {
       'connect-src': "'self' http://*.lvh.me:3000"
     },
