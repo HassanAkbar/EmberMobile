@@ -1,6 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  sortProps: ['sequenceNum:desc'],
+  sortedAssets: Ember.computed.sort('model', 'sortProps'),
+  bhatti: Ember.computed('foo',function()
+  { 
+    return this.get('foo').toArray().reverse();
+  }).property('model.[]'),
+
   didInsertElement() {
     var framework = this.get('framework-seven').get('framework');
     this.get('framework-seven').get('framework').init(); // WHY?
@@ -19,7 +26,8 @@ export default Ember.Component.extend({
     refresh: function() {
       this.sendAction('action');
     }
-  }
+  },
+  
 
 });
 

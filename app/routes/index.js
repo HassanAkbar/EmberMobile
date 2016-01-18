@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   pageNo: 2,
-  model(params) {
+  model() {
     return this.store.findAll('asset');
   },
   actions: {
@@ -14,6 +14,7 @@ export default Ember.Route.extend({
         this.set('pageNo', nextPage + 1);
         this.refresh();
       });
-    }
+    },
   }
+
 });
