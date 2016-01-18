@@ -14,6 +14,16 @@ export default Ember.Route.extend({
         this.set('pageNo', nextPage + 1);
         this.refresh();
       });
+    },
+
+    yoFaizan: function() {
+      alert('yo faizan');
+    },
+    yoHassan: function() {
+      alert('yo hassan');
+    },
+    yoZeeshan: function() {
+      alert('yo boo');
     }
   }
 });
