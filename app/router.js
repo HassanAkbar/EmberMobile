@@ -9,11 +9,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  // this.route('/', function() {
-  //   this.route('show');
-  // });
   this.route('framework7');
-
   this.route('show', {path: '/show/:asset_id'});
 });
 

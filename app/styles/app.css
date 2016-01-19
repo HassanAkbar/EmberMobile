@@ -1,3 +1,8 @@
-.ember-view {
-  height: inherit;
+/*.ember-view {*/
+  /*height: inherit;*/
+/*}*/
+
+body > .ember-view {
+  height: 100%;
 }
+
